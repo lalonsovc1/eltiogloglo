@@ -1,0 +1,746 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import HeroKeyBackground from "@/assets/hero-key-background.webp"
+import LogoVI from "@/assets/eltiogloglo.png"
+import FlechaAbajo from "@/assets/flecha-abajo.png"
+import NuevaImagenBg from "@/assets/fondo-todo.png" 
+import GlogloPerfil from "@/assets/gloglo-perfil2.jpg"
+import GlogloSobreMi from "@/assets/gloglo-sobremi.png"
+---
+
+<Layout>
+  <!-- CONTENEDOR DE LA LLUVIA DE MONEDAS -->
+  <div id="lluvia-monedas" class="fixed inset-0 w-full h-screen pointer-events-none z-15 overflow-hidden"></div>
+
+  <div id="logo-mask" class="fixed top-0 w-full h-screen bg-black z-10">
+    <section>
+      <picture
+        id="hero-key"
+        class="w-full h-screen scale-125 flex items-center justify-center overflow-hidden fixed bg-black"
+      >
+<div
+          id="hero-key-logo"
+          class="absolute z-10 max-w-[850px] w-full px-6 flex flex-col items-center justify-center text-center text-white md:items-end md:justify-center md:text-right md:pr-[0.5rem]"
+        >
+          <h1 class="text-white font-black tracking-wider uppercase text-xl sm:text-2xl md:text-4xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] mb-6 animate-pulse flex flex-col items-center md:items-end w-full leading-tight sm:leading-normal">
+            <span>ELIMINA EL AZAR.</span>
+            <span class="block">CONSTRUYE TU RIQUEZA.</span>
+          </h1>
+
+          <a 
+            href="https://t.me/gloglokingbet" 
+            class="inline-flex items-center gap-2 bg-red-500 text-white font-black px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm md:text-base uppercase tracking-wide hover:bg-red-600 transition-colors shadow-lg shadow-red-500/20 transform hover:scale-105 transition-transform duration-300 pointer-events-auto"
+          >
+            Unirse al Canal de Telegram
+          </a>
+        </div>
+
+        <img
+          id="hero-key-background"
+          src={HeroKeyBackground.src}
+          class="max-w-full max-h-full object-contain aspect-[1080/569]"
+          alt="Background"
+        />
+      </picture>
+    </section>
+  </div>
+
+<div 
+    id="texto-bajo-gloglo" 
+    class="fixed top-[52%] left-1/2 -translate-x-1/2 z-25 w-full max-w-xl px-6 text-center text-white opacity-0 transform translate-y-8 pointer-events-none"
+  >
+    <h3 class="text-red-400 text-2xl md:text-4xl font-black uppercase tracking-[0.25em] drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+      JUEGA A GANAR.
+    </h3>
+
+    <a 
+      href="https://t.me/gloglokingbet" 
+      class="inline-flex items-center gap-2 bg-red-400 text-white font-black px-6 py-3 rounded-xl text-sm md:text-base uppercase tracking-wide hover:bg-red-600 transition-colors shadow-lg shadow-red-500/20 transform hover:scale-105 transition-transform duration-300 mt-8 pointer-events-auto" 
+    >
+      Unirse al Canal de Telegram
+    </a>
+  </div>
+
+  <div
+    class="fixed flex flex-col items-center justify-between h-screen px-20 py-16 w-full z-20 pointer-events-none"
+  >
+    <header class="flex justify-between items-center w-full pointer-events-auto">
+      <a 
+        href="https://kick.com/elglogloking" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-block transition-transform duration-500 hover:scale-110 cursor-pointer"
+      >
+        <img 
+        id="LogoVI"
+        src={LogoVI.src} 
+        alt="Stake Logo"
+        class="w-38 h-auto drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
+      />
+      </a>
+
+      <!-- BOTÓN MENÚ DE TRES RAYITAS -->
+      <button 
+        id="btn-open-menu"
+        class="flex flex-col justify-between w-8 h-5 group cursor-pointer focus:outline-none z-50 select-none"
+        aria-label="Abrir menú"
+      >
+        <span class="w-full h-[3px] bg-white rounded-full transition-transform duration-300 origin-left group-hover:bg-red-400"></span>
+        <span class="w-full h-[3px] bg-white rounded-full transition-opacity duration-300 group-hover:bg-red-400"></span>
+        <span class="w-full h-[3px] bg-white rounded-full transition-transform duration-300 origin-left group-hover:bg-red-400"></span>
+      </button>
+    </header>
+
+<footer id="hero-footer" class="absolute bottom-8 m-auto">
+      <img 
+        src={FlechaAbajo.src} 
+        alt="Flecha Abajo"
+        class="w-38 h-auto drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
+      />
+    </footer>
+  </div>
+
+
+  <div class="relative w-full min-h-[5000vh]">
+    <!-- SEGUNDA SECCIÓN -->
+<div 
+  id="segunda-seccion" 
+  class="fixed inset-0 w-full h-screen opacity-0 pointer-events-none bg-cover bg-center overflow-y-auto"
+  style={`background-image: url(${NuevaImagenBg.src});`}
+>
+  <div class="absolute inset-0 bg-black/70 z-0 pin-bg"></div>
+
+  <!-- Contenedor Wrapper para centrado dinámico que permite scroll si el contenido supera la pantalla -->
+  <div class="relative z-10 min-h-full w-full flex items-center justify-center py-12 md:py-20">
+    
+    <div 
+      id="segunda-seccion-texto" 
+      class="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-12 opacity-0 transform translate-y-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center text-left"
+    >
+      <!-- COLUMNA TEXTO -->
+      <div class="flex flex-col justify-center order-2 lg:order-1">
+        <h2 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-wide mb-4 md:mb-6 text-white leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]">
+          Deja de buscar milagros. <br />
+          <span class="text-red-400">Empieza a ver los datos.</span>
+        </h2>
+        
+        <div class="space-y-3 md:space-y-4 max-w-xl text-sm sm:text-base md:text-lg text-gray-300 font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+          <p>
+            El mercado está lleno de capturas falsas. Por eso, <strong class="text-white font-bold">Las fijas</strong> creó un método diferente: análisis frío, gestión de riesgo y resultados verificados.
+          </p>
+          <p class="text-gray-400 font-light text-xs sm:text-sm md:text-base">
+            Aquí no apostamos por emoción, ejecutamos con estrategia para hacer crecer tu capital de forma inteligente. Las pruebas están sobre la mesa.
+          </p>
+        </div>
+
+        <p class="mt-4 md:mt-6 text-white font-black uppercase tracking-widest text-xs sm:text-sm md:text-base border-l-4 border-red-400 pl-3">
+          ¿Entras o te quedas mirando?
+        </p>
+        
+        <div>
+          <a 
+            href="https://t.me/gloglokingbet" 
+            class="inline-flex items-center gap-2 bg-red-400 text-white font-black px-5 py-3 rounded-xl text-xs sm:text-sm md:text-base uppercase tracking-wide hover:bg-red-600 transition-colors shadow-lg shadow-red-500/20 transform hover:scale-105 transition-transform duration-300 mt-6 md:mt-8 pointer-events-auto" 
+          >
+            Unirse al Canal de Telegram
+          </a>
+        </div>
+      </div>
+      
+      <!-- COLUMNA TARJETA / IMAGEN -->
+      <div class="flex items-center justify-center lg:justify-end w-full order-1 lg:order-2 mb-4 lg:mb-0">
+        <!-- Se redujo la altura en móvil (h-[280px]) para que quepa perfectamente sin empujar demasiado el texto -->
+        <div class="relative w-full max-w-[280px] sm:max-w-sm h-[280px] sm:h-[380px] md:h-[440px] flex items-center justify-center group">
+          <div class="absolute inset-0 bg-red-400/5 blur-3xl rounded-full scale-75 group-hover:bg-red-400/10 transition-all duration-750 pointer-events-none"></div>
+
+          <!-- Tarjeta de fondo (Texto) -->
+          <div class="absolute top-0 left-0 w-[80%] h-[80%] sm:h-[75%] rounded-xl border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.6)] bg-neutral-950 p-4 sm:p-6 flex flex-col justify-between transition-all duration-500 group-hover:border-white/20 select-none">
+            <div>
+              <span class="text-[8px] sm:text-[10px] font-black tracking-widest text-red-400 uppercase block mb-0.5 sm:mb-1">CREADOR DE CONTENIDO</span>
+              <h4 class="text-white font-black text-lg sm:text-xl md:text-2xl tracking-wide uppercase">GLOGLOKING</h4>
+              <p class="text-[9px] sm:text-[11px] md:text-xs text-gray-400 font-light italic mt-1 leading-relaxed tracking-wide max-w-[140px] sm:max-w-[180px]">
+                "La minería me enseñó a buscar en lo oscuro; la disciplina me enseñó a brillar en lo más alto."
+              </p>
+            </div>
+
+            <div class="flex gap-4 sm:gap-8 border-t border-white/5 pt-3 sm:pt-4 text-left">
+              <div>
+                <span class="text-[8px] sm:text-[10px] text-gray-500 block uppercase tracking-wider mb-0.5">EFECTIVIDAD</span>
+                <span class="text-base sm:text-xl md:text-2xl text-emerald-400 font-black font-mono">95.6%</span>
+              </div>
+              <div>
+                <span class="text-[8px] sm:text-[10px] text-gray-500 block uppercase tracking-wider mb-0.5">MÉTODO</span>
+                <span class="text-xs sm:text-sm md:text-base text-white font-bold tracking-wide block mt-0.5 sm:mt-1 font-mono">AUDITADO</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta de frente (Foto) -->
+          <div class="absolute bottom-0 right-0 w-[55%] h-[65%] sm:h-[60%] rounded-lg overflow-hidden border-[3px] sm:border-[4px] border-neutral-900 shadow-[0_20px_40px_rgba(0,0,0,0.9)] bg-neutral-950 transform group-hover:translate-y-[-6px] group-hover:translate-x-[-6px] transition-transform duration-500 z-10">
+            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-400/40 to-transparent z-20"></div>
+            <img 
+              src={GlogloPerfil.src} 
+              alt="Glogloking Perfil" 
+              class="w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div 
+      id="tercer-seccion" 
+      class="fixed inset-0 w-full h-screen opacity-0 pointer-events-none bg-gradient-to-b from-black via-neutral-950 to-zinc-950 z-30 overflow-y-auto"
+    >
+      <div class="relative z-10 min-h-full w-full flex items-center justify-center py-12 md:py-16">
+        
+        <div class="w-full max-w-6xl mx-auto flex flex-col items-center text-center px-4 sm:px-6 md:px-12">
+          
+          <h2 
+            id="tercer-seccion-titulo" 
+            class="font-black text-xl sm:text-2xl md:text-4xl lg:text-5xl uppercase tracking-wider mb-8 md:mb-10 opacity-0 transform translate-y-6 bg-gradient-to-r from-white via-red-400 to-white bg-[length:200%_auto] bg-clip-text text-transparent select-none"
+          >
+            LO QUE NOS DIFERENCIA:
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mb-8">
+            <div class="tarjeta-unica border border-red-500/30 rounded-xl bg-neutral-950/60 backdrop-blur-md p-5 sm:p-6 flex flex-col items-center justify-center min-h-[220px] sm:min-h-[260px] opacity-0 transform translate-y-10 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+              <div class="mb-3 md:mb-4 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-8 md:size-10 stroke-[1.25]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+              </div>
+              <p class="text-white text-base md:text-xl font-black italic leading-relaxed mb-2">
+                Acompañamiento Estratégico
+              </p>
+              <p class="text-gray-300 text-xs md:text-base font-medium italic leading-relaxed px-2">
+                 Guía continua las 24 horas para dominar el aspecto psicológico y no flaquear ante el mercado.
+              </p>
+            </div>
+
+            <div class="tarjeta-unica border border-red-500/30 rounded-xl bg-neutral-950/60 backdrop-blur-md p-5 sm:p-6 flex flex-col items-center justify-center min-h-[220px] sm:min-h-[260px] opacity-0 transform translate-y-10 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+              <div class="mb-3 md:mb-4 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-8 md:size-10 stroke-[1.25]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+              </div>
+              <p class="text-white text-base md:text-xl font-black italic leading-relaxed mb-2">
+                El Método VI
+              </p>
+              <p class="text-gray-300 text-xs md:text-base font-medium italic leading-relaxed px-2">
+                Una estructura basada en datos fríos, aplicable tanto a las canchas como a los escenarios virtuales de competencia.
+              </p>
+            </div>
+
+            <div class="tarjeta-unica border border-red-500/30 rounded-xl bg-neutral-950/60 backdrop-blur-md p-5 sm:p-6 flex flex-col items-center justify-center min-h-[220px] sm:min-h-[260px] opacity-0 transform translate-y-10 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+              <div class="mb-3 md:mb-4 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-8 md:size-10 stroke-[1.25]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="5" rx="2"/><path d="M12 5v14"/><path d="M3 12h18"/></svg>
+              </div>
+              <p class="text-white text-base md:text-xl font-black italic leading-relaxed mb-2">
+                Lectura Avanzada del Entorno
+              </p>
+              <p class="text-gray-300 text-xs md:text-base font-medium italic leading-relaxed px-2">
+                Datos exclusivos recopilados minuciosamente para evitar sorpresas y asegurar el control del juego.
+              </p>
+            </div>
+
+            <div class="tarjeta-unica border border-red-500/30 rounded-xl bg-neutral-950/60 backdrop-blur-md p-5 sm:p-6 flex flex-col items-center justify-center min-h-[220px] sm:min-h-[260px] opacity-0 transform translate-y-10 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+              <div class="mb-3 md:mb-4 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-8 md:size-10 stroke-[1.25]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m12 14-4-4h8z"/></svg>
+              </div>
+              <p class="text-white text-base md:text-xl font-black italic leading-relaxed mb-2">
+                Certeza Matemática
+              </p>
+              <p class="text-gray-300 text-xs md:text-base font-medium italic leading-relaxed px-2">
+                Expertos en datos descartando el ruido y seleccionando rigurosamente los 5 análisis diarios más sólidos.
+              </p>
+            </div>
+          </div>
+
+          <p id="tercer-seccion-subtexto" class="text-white font-medium tracking-wide text-xs sm:text-sm md:text-base mb-5 opacity-0 flex items-center justify-center gap-1">
+            El poder del sol en la palma de tu mano 👇
+          </p>
+
+          <div>
+            <a 
+              id="btn-telegram"
+              href="https://t.me/gloglokingbet" 
+              class="inline-flex items-center gap-2 bg-[#EF5350] text-black font-black px-6 py-3 sm:px-8 sm:py-3.5 rounded-md text-xs sm:text-base md:text-lg uppercase tracking-wide hover:bg-red-500 transition-colors pointer-events-auto shadow-[0_0_20px_rgba(239,83,80,0.3)] opacity-0 transform scale-90"
+            >
+              Unirme al Canal Gratis
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- CUARTA SECCIÓN: VIDEO -->
+    <div 
+      id="cuarta-seccion-video" 
+      class="fixed inset-0 w-full h-screen opacity-0 pointer-events-none bg-black z-40 overflow-hidden"
+    >
+      <video 
+        id="video-scroll" 
+        src="/src/assets/gloglo-box.mp4" 
+        preload="auto" 
+        muted 
+        playsinline 
+        class="w-full h-full object-cover"
+      ></video>
+      <div id="video-overlay" class="absolute inset-0 bg-black/0 transition-colors duration-300 pointer-events-none"></div>
+    </div>
+
+    <!-- QUINTA SECCIÓN: COMUNIDAD -->
+    <div 
+      id="quinta-seccion-comunidad" 
+      class="fixed inset-0 w-full h-screen opacity-0 pointer-events-none flex flex-col items-center justify-center p-6 md:p-12 z-50"
+    >
+      <div class="w-full max-w-5xl mx-auto flex flex-col items-center text-center">
+        <h2 id="voces-titulo" class="text-white font-black text-3xl md:text-6xl uppercase tracking-wider mb-2 opacity-0 transform translate-y-12 filter blur-[4px]">
+          VOCES DE LA COMUNIDAD
+        </h2>
+        <p id="voces-subtitulo" class="text-red-400 font-bold tracking-widest text-xs md:text-sm uppercase mb-12 opacity-0 transform translate-y-6">
+          Resultados reales de personas reales
+        </p>
+
+        <div id="voces-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full opacity-0 transform translate-y-16">
+          <div class="bg-neutral-950/80 backdrop-blur-md border border-white/10 p-6 rounded-xl text-left">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 font-black">C1</div>
+              <div>
+                <h4 class="text-white font-bold text-sm">Carlos M.</h4>
+                <span class="text-xs text-gray-500">Miembro desde hace 4 meses</span>
+              </div>
+            </div>
+            <p class="text-gray-300 text-sm italic font-light leading-relaxed">
+              "Llevaba meses perdiendo dinero siguiendo a tipsters de capturas editadas. El método transparente de Gloglo me cambió el chip por completo."
+            </p>
+          </div>
+
+          <div class="bg-neutral-950/80 backdrop-blur-md border border-white/10 p-6 rounded-xl text-left">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 font-black">A2</div>
+              <div>
+                <h4 class="text-white font-bold text-sm">Andrés R.</h4>
+                <span class="text-xs text-gray-500">Miembro VIP</span>
+              </div>
+            </div>
+            <p class="text-gray-300 text-sm italic font-light leading-relaxed">
+              "Aquí aprendí a cuidar mi banca. No hay milagros, hay pura disciplina y análisis matemático frío de datos."
+            </p>
+          </div>
+
+          <div class="bg-neutral-900/80 backdrop-blur-md border border-white/10 p-6 rounded-xl text-left">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 font-black">J3</div>
+              <div>
+                <h4 class="text-white font-bold text-sm">Juan Diego K.</h4>
+                <span class="text-xs text-gray-500">Comunidad de Kick</span>
+              </div>
+            </div>
+            <p class="text-gray-300 text-sm italic font-light leading-relaxed">
+              "5 análisis al día y directo al grano, sin rodeos ni falsas promesas. El canal gratuito vale oro líquido."
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      <a 
+      href="https://t.me/gloglokingbet" 
+      class="inline-flex items-center gap-2 bg-red-400 text-white font-black px-6 py-3 rounded-xl text-sm md:text-base uppercase tracking-wide hover:bg-red-600 transition-colors shadow-lg shadow-red-500/20 transform hover:scale-105 transition-transform duration-300 mt-8 pointer-events-auto" 
+    >
+      Unirse al Canal de Telegram
+    </a>
+    </div>
+
+    <!-- SEXTA SECCIÓN: SOBRE GLOGLOKING -->
+<div 
+      id="seccion-sobre-gloglo" 
+      class="fixed inset-0 w-full h-screen opacity-0 pointer-events-none bg-gradient-to-b from-white to-neutral-500 z-[60] overflow-y-auto text-black"
+    >
+      <div class="relative z-10 min-h-full w-full flex items-center justify-center py-12 md:py-16">
+        
+        <div 
+          id="sobre-gloglo-contenido" 
+          class="max-w-6xl w-full mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center opacity-0 transform translate-y-10"
+        >
+          <div class="w-full h-[240px] sm:h-[320px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl border-4 border-neutral-100">
+            <img 
+              src={GlogloSobreMi.src} 
+              alt="Sobre Glogloking" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          
+          <div class="flex flex-col justify-center text-left">
+            <span class="text-red-500 font-black tracking-widest text-[10px] sm:text-xs uppercase mb-1 md:mb-2">STREAMER Y CREADOR</span>
+            <h2 class="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 md:mb-6 text-neutral-900 leading-tight">
+              SOBRE GLOGLOKING
+            </h2>
+            
+            <div class="space-y-3 md:space-y-4 text-neutral-600 font-medium text-sm sm:text-base md:text-lg leading-relaxed">
+              <p>
+                Detrás del éxito actual en las pantallas no hay un camino fácil, sino una historia de supervivencia. Antes de ser el streamer y creador de contenido que ves hoy, Glogloking conoció la oscuridad profunda de la minería: turnos interminables, explotación extrema y promesas rotas donde al final, nunca le pagaron nada por su esfuerzo.
+              </p>
+              <p class="text-neutral-700 font-light text-xs sm:text-sm md:text-base">
+                Ese dolor y esa injusticia se convirtieron en su mayor combustible. En lugar de rendirse, canalizó esa resistencia para dominar los mercados con frialdad matemática y construir su propia riqueza desde cero. Hoy, frente a miles de personas en vivo, su misión es limpiar el ruido del sistema, compartiendo de forma transparente las herramientas que a él lo sacaron del subsuelo absoluto.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+   <!-- SÉPTIMA SECCIÓN: RESULTADOS + CTA + FOOTER -->
+    <div 
+      id="seccion-resultados-final" 
+     class="fixed inset-0 w-full h-screen opacity-0 pointer-events-none bg-gradient-to-b from-neutral-500 to-white z-[65] overflow-y-auto text-black flex flex-col justify-between"
+    >
+      <!-- CONTENIDO PRINCIPAL (RESULTADOS + CTA) -->
+      <div class="w-full bg-transparent py-20 px-6 md:px-12 flex-grow">
+        <section class="max-w-6xl mx-auto mb-32 text-center pt-6">
+          <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight text-neutral-900 mb-2">
+            LA REALIDAD HABLA SOLA
+          </h2>
+          <p class="text-white font-medium tracking-wide text-sm md:text-base mb-16">
+            Estadísticas reales, auditadas y validadas por nuestra comunidad.
+          </p>
+          
+          <div class="grid  grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div class="bg-red-200 p-8 rounded-2xl border border-neutral-100 shadow-sm flex flex-col justify-center items-center">
+              <span class="text-5xl md:text-6xl font-black text-neutral-900 font-mono mb-2">95.6%</span>
+              <span class="text-xs uppercase tracking-widest font-black text-red-500">Eficiencia Global</span>
+            </div>
+            <div class="bg-green-200 p-8 rounded-2xl border border-neutral-100 shadow-sm flex flex-col justify-center items-center">
+              <span class="text-5xl md:text-6xl font-black text-emerald-600 font-mono mb-2">+42%</span>
+              <span class="text-xs uppercase tracking-widest font-black text-neutral-500">Ganancia Mensual Promedio</span>
+            </div>
+            <div class="bg-yellow-200 p-8 rounded-2xl border border-neutral-100 shadow-sm flex flex-col justify-center items-center">
+              <span class="text-5xl md:text-6xl font-black text-neutral-900 font-mono mb-2">1.5k+</span>
+              <span class="text-xs uppercase tracking-widest font-black text-neutral-500">Soldados Activos</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto text-center bg-neutral-950 text-white rounded-3xl p-8 md:p-16 shadow-2xl relative overflow-hidden mb-8">
+          <div class="absolute -right-16 -top-16 w-40 h-40 bg-red-500/10 blur-3xl rounded-full"></div>
+          <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4">
+            ¿Listo para formar parte de la comunidad?
+          </h2>
+          <p class="text-neutral-400 text-base md:text-lg max-w-xl mx-auto mb-8 font-medium">
+            Deja de regalar tu dinero al sistema. Únete hoy mismo al canal gratuito y empieza a operar con estrategia real.
+          </p>
+          <a 
+            href="https://t.me/gloglokingbet" 
+            class="inline-flex items-center gap-2 bg-red-500 text-white font-black px-10 py-4 rounded-xl text-lg uppercase tracking-wide hover:bg-red-600 transition-colors shadow-lg shadow-red-500/20"
+          >
+            Unirse al Canal de Telegram
+          </a>
+        </section>
+      </div>
+
+      <!-- FOOTER COMPLETO FONDO NEGRO -->
+      <footer class="w-full bg-black text-neutral-400 py-8 px-6 md:px-12 border-t border-neutral-900">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs font-medium gap-4">
+          <p>© 2026 Glogloking. Todos los derechos reservados. Diseñado para ganadores.</p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-white transition-colors">Términos de Servicio</a>
+            <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+            <a href="https://kick.com/elglogloking" target="_blank" class="hover:text-red-500 font-bold transition-colors">Kick Stream</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+      </div>
+    </div>
+
+  </div>
+  
+</Layout>
+<!-- PANEL DEL MENÚ DESPLEGABLE -->
+  <div 
+    id="menu-overlay" 
+    class="fixed inset-0 w-full h-screen bg-black/95 z-[100] flex flex-col items-center justify-center invisible opacity-0 transition-all duration-300"
+  >
+    <!-- BOTÓN PARA CERRAR (X) -->
+    <button 
+      id="btn-close-menu" 
+      class="absolute top-16 right-20 text-white text-4xl font-light hover:text-red-400 transition-colors cursor-pointer select-none"
+    >
+      ✕
+    </button>
+
+    <!-- ENLACES DEL MENÚ -->
+    <nav class="flex flex-col items-center gap-8 text-center">
+      <a 
+        id="link-sobre-mi"
+        href="#seccion-sobre-gloglo" 
+        class="text-white text-3xl md:text-5xl font-black uppercase tracking-widest hover:text-red-400 transition-colors transform translate-y-4"
+      >
+        Sobre Mí
+      </a>
+    </nav>
+  </div>
+
+<style is:global>
+
+  .animate-parpadeo {
+    animation: parpadeoSuave 2s infinite ease-in-out;
+  }
+
+  @keyframes parpadeoSuave {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(6px); 
+    }
+  }
+  #logo-mask {
+    background: white; 
+    mask-image: url("/gloglo.png");
+    mask-position: center 25%;
+    mask-repeat: no-repeat;
+    mask-size: clamp(5000vh, 3500%, 0vh);
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.1));
+  }
+
+  .moneda-oro {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle at 35% 35%, #ffe680, #f59e0b 55%, #b45309);
+    border-radius: 50%;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.7), inset 0 -2px 4px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+    top: -40px;
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap"
+  import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  // --- LLUVIA DE MONEDAS ---
+  const contenedorMonedas = document.getElementById("lluvia-monedas");
+  const cantidadMonedas = 45; 
+  
+
+  if (contenedorMonedas) {
+    for (let i = 0; i < cantidadMonedas; i++) {
+      const moneda = document.createElement("div");
+      moneda.classList.add("moneda-oro");
+      gsap.set(moneda, {
+        left: `${Math.random() * 100}%`,
+        scale: Math.random() * 0.6 + 0.5,
+        opacity: 0
+      });
+      contenedorMonedas.appendChild(moneda);
+    }
+  }
+  const todasLasMonedas = document.querySelectorAll(".moneda-oro");
+
+  // --- CONFIGURACIÓN DEL VIDEO ---
+  const video = document.getElementById("video-scroll") as HTMLVideoElement;
+  let videoContenedor = { currentTime: 0 };
+
+  // --- TIMELINE COMPLETAMENTE RE-ESTRUCTURADO ---
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "body",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 4.5, 
+    },
+  })
+
+
+
+
+tl.to("#LogoVI", { opacity: 1, display: "none", duration: 2.0 }, 2.0);
+  tl.to("#hero-key", { duration: 6.0, scale: 1 }, 0)
+    .to("#hero-key-logo", { opacity: 0, duration: 4.0 }, 0) 
+    .to("#hero-footer", { opacity: 0, duration: 4.0 }, 0)
+    
+  tl.to("#logo-mask", { maskSize: "clamp(22vh, 25%, 28vh)", duration: 6.0, ease: "expo.out" }, 6.0)
+    .to("#hero-key", { opacity: 0, duration: 2.0 }, 9.0)
+    
+// ==========================================
+  // FASE 2: JUEGA A GANAR + MONEDAS (14.0 a 28.0)
+  // ==========================================
+  tl.to("#texto-bajo-gloglo", { opacity: 1, y: 0, duration: 4.0, ease: "back.out(1.0)" }, 14.0)
+  
+
+  todasLasMonedas.forEach((moneda) => {
+    tl.to(moneda, {
+      opacity: 1,
+      y: window.innerHeight + 100,
+      rotationX: Math.random() * 720 + 360,
+      rotationY: Math.random() * 720 + 360,
+      rotationZ: Math.random() * 360,
+      duration: Math.random() * 6.0 + 5.0, 
+      ease: "power1.inOut"
+    }, 14.0);
+  });
+  
+  tl.to(".moneda-oro", { opacity: 0, duration: 2.0 }, 24.0)
+    .to("#texto-bajo-gloglo", { opacity: 0, scale: 0.8, duration: 3.0 }, 25.0)
+  
+  // Transmisión expansiva: Forzamos la desaparición total del logo del tío Gloglo
+  tl.to("#logo-mask", { maskSize: "clamp(6000vh, 4500%, 0vh)", duration: 6.0, ease: "power4.in" }, 28.0) 
+  
+  tl.to("#logo-mask", { opacity: 0, display: "none", duration: 1.0 }, 32.5)
+
+  // ==========================================
+  // FASE 3: SEGUNDA SECCIÓN - DATOS (34.0 a 54.0)
+  // ==========================================
+  tl.to("#segunda-seccion", { opacity: 1, pointerEvents: "auto", duration: 3.0 }, 33.0) 
+  tl.to("#segunda-seccion-texto", { opacity: 1, y: 0, duration: 5.0, ease: "power2.out" }, 34.0)
+
+  // ==========================================
+  // FASE 4: TERCERA SECCIÓN - TARJETAS Y BRILLO (54.0 a 76.0)
+  // ==========================================
+  tl.to("#tercer-seccion", { opacity: 1, pointerEvents: "auto", duration: 3.0 }, 54.0)
+    .to("#tercer-seccion-titulo", { opacity: 1, y: 0, duration: 3.0 }, 56.0)
+    
+    .to("#tercer-seccion-titulo", { bgPosition: "200% center", duration: 12.0, ease: "none" }, 56.0)
+
+    .to(".tarjeta-unica", { opacity: 1, y: 0, stagger: 1.2, duration: 4.0, ease: "back.out(1.0)" }, 58.0)
+    .to("#tercer-seccion-subtexto", { opacity: 1, duration: 2.0 }, 64.0)
+    .to("#btn-telegram", { opacity: 1, scale: 1, duration: 3.0, ease: "elastic.out(1, 0.75)" }, 65.0)
+
+  tl.to("#tercer-seccion", { opacity: 1, y: -60, duration: 4.0 }, 76.0)
+
+  // ==========================================
+  // FASE 5: VIDEO SCROLL (80.0 a 100.0)
+  // ==========================================
+  tl.to("#cuarta-seccion-video", { opacity: 1, pointerEvents: "auto", duration: 3.0 }, 80.0)
+
+  if (video) {
+    const syncVideo = () => {
+      tl.to(videoContenedor, {
+        currentTime: video.duration || 5,
+        duration: 18.0, 
+        ease: "none",
+        onUpdate: () => {
+          video.currentTime = videoContenedor.currentTime;
+        }
+      }, 81.0);
+    };
+    video.addEventListener("loadedmetadata", syncVideo);
+    if(video.duration) syncVideo();
+  }
+
+  // ==========================================
+  // FASE 6: VOCES DE LA COMUNIDAD (90.0 a 112.0)
+  // ==========================================
+  tl.to("#video-overlay", { backgroundColor: "rgba(0, 0, 0, 0.7)", duration: 4.0 }, 86.0)
+    .to("#quinta-seccion-comunidad", { opacity: 1, pointerEvents: "auto", duration: 3.0 }, 90.0)
+    .to("#voces-titulo", { opacity: 1, y: 0, filter: "blur(0px)", duration: 4.0, ease: "power3.out" }, 92.0)
+    .to("#voces-subtitulo", { opacity: 1, y: 0, duration: 3.0 }, 95.0)
+    .to("#voces-grid", { opacity: 1, y: 0, duration: 5.0, ease: "power2.out" }, 97.0)
+
+  tl.to("#quinta-seccion-comunidad", { opacity: 0, y: -40, duration: 4.0 }, 112.0)
+    .to("#cuarta-seccion-video", { opacity: 1, duration: 4.0 }, "<")
+
+  // ==========================================
+  // FASE 7: SOBRE GLOGLOKING (116.0 a 138.0)
+  // ==========================================
+  tl.to("#seccion-sobre-gloglo", { opacity: 1, pointerEvents: "auto", duration: 4.0 }, 116.0)
+    .to("#sobre-gloglo-contenido", { opacity: 1, y: 0, duration: 5.0, ease: "power2.out" }, 119.0)
+
+  tl.to("#sobre-gloglo-contenido", { opacity: 0, y: -50, duration: 4.0, ease: "power2.in" }, 138.0)
+    .to("#seccion-sobre-gloglo", { opacity: 0, duration: 3.0 }, 141.0)
+
+  // ==========================================
+  // FASE 8: DESEMBARCO FINAL JUNTOS (144.0+)
+  // ==========================================
+  tl.to("#seccion-resultados-final", { opacity: 1, pointerEvents: "auto", duration: 5.0 }, 144.0)
+// ==========================================
+  // FASE 1: HERO & LOGO MASK (0.0 a 12.0)
+  // ==========================================
+  
+  // 1. ANIMACIÓN INICIAL EN LOOP (Parpadea solo al inicio si el scroll está arriba)
+  const footerTween = gsap.fromTo("#hero-footer", 
+    { opacity: 0.3, y: 0 }, 
+    { opacity: 1, y: 8, duration: 1.2, repeat: -1, yoyo: true, ease: "power1.inOut" }
+  );
+
+  // 2. CONTROL DEL FOOTER DENTRO DEL TIMELINE GLOBAL DEL SCROLL
+  tl.to("#hero-key", { duration: 6.0, scale: 1 }, 0)
+    .to("#hero-key-logo", { opacity: 0, duration: 4.0 }, 0) 
+    
+    // En cuanto el usuario baja un milímetro (de 0.0 a 2.0 en el scroll), matamos el footer
+    .to("#hero-footer", { 
+      opacity: 0, 
+      pointerEvents: "none", 
+      duration: 2.0,
+      onStart: () => {
+        // Pausamos el bucle interno para liberar memoria del navegador
+        footerTween.pause();
+      },
+      onReverseComplete: () => {
+        // Si el usuario regresa arriba del todo, el parpadeo vuelve a marchar
+        footerTween.play();
+      }
+    }, 0)
+    
+  tl.to("#logo-mask", { maskSize: "clamp(22vh, 25%, 28vh)", duration: 6.0, ease: "expo.out" }, 6.0)
+    .to("#hero-key", { opacity: 0, duration: 2.0 }, 9.0)
+
+  // --- CONTROL DEL MENÚ DESPLEGABLE Y NAVEGACIÓN POR LABELS ---
+  const btnOpenMenu = document.getElementById("btn-open-menu");
+  const btnCloseMenu = document.getElementById("btn-close-menu");
+  const menuOverlay = document.getElementById("menu-overlay");
+  const linkSobreMi = document.getElementById("link-sobre-mi");
+
+  function abrirMenu() {
+    if (menuOverlay) {
+      menuOverlay.classList.remove("invisible");
+      gsap.to(menuOverlay, { opacity: 1, duration: 0.4, ease: "power2.out" });
+      gsap.to("#link-sobre-mi", { y: 0, delay: 0.2, duration: 0.4, ease: "back.out(1.5)" });
+    }
+  }
+
+  function cerrarMenu() {
+    if (menuOverlay) {
+      gsap.to(menuOverlay, { 
+        opacity: 0, 
+        duration: 0.3, 
+        ease: "power2.in",
+        onComplete: () => {
+          menuOverlay.classList.add("invisible");
+          gsap.set("#link-sobre-mi", { y: 16 });
+        }
+      });
+    }
+  }
+
+  // Event Listeners para abrir y cerrar el menú
+  btnOpenMenu?.addEventListener("click", abrirMenu);
+  btnCloseMenu?.addEventListener("click", cerrarMenu);
+
+  // Solución para la navegación: Calcular el progreso exacto del timeline en vez de saltar al div fixed
+  linkSobreMi?.addEventListener("click", (e) => {
+    e.preventDefault();
+    cerrarMenu();
+
+    // Calculamos en qué porcentaje del scroll general inicia la Fase 7 (Sobre Gloglo)
+    const totalDuration = tl.totalDuration();
+    const targetTime = 119.0; 
+    const scrollProgress = targetTime / totalDuration;
+
+    // Calculamos los píxeles de scroll basándonos en la altura total real del documento
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    
+    // Hacemos scroll fluido al punto exacto de la animación
+    window.scrollTo({
+      top: maxScroll * scrollProgress,
+      behavior: "smooth"
+    });
+  });
+</script>
