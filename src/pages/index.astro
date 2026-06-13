@@ -279,16 +279,15 @@ import GlogloSobreMi from "@/assets/gloglo-sobremi.png"
       id="cuarta-seccion-video" 
       class="fixed inset-0 w-full h-screen opacity-0 pointer-events-none bg-black z-40 overflow-hidden"
     >
-      <video 
-        id="video-scroll" 
-        src="/src/assets/gloglo-box.mp4" 
-        preload="auto" 
-        muted 
-        playsinline 
-        class="w-full h-full object-cover"
-      ></video>
-      <div id="video-overlay" class="absolute inset-0 bg-black/0 transition-colors duration-300 pointer-events-none"></div>
-    </div>
+<video 
+  id="video-scroll" 
+  src={`${import.meta.env.BASE_URL}gloglo-box.mp4`} 
+  preload="auto" 
+  muted 
+  playsinline 
+  class="w-full h-full object-cover"
+></video>
+<div id="video-overlay" class="absolute inset-0 bg-black/0 transition-colors duration-300 pointer-events-none"></div>
 
     <!-- QUINTA SECCIÓN: COMUNIDAD -->
     <div 

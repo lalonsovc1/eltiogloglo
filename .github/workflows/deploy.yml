@@ -1,41 +1,81 @@
-name: Deploy to GitHub Pages
+name: Desplegar a GitHub Pages
 
 on:
-  # Activa el flujo de trabajo cada vez que hagas push a la rama `main`
-  # Usando un nombre de rama diferente? Reemplaza `main` con el nombre de tu rama
   push:
     branches: [ main ]
-  # Te permite ejecutar este flujo de trabajo manualmente desde la pestaña Acciones en GitHub.
   workflow_dispatch:
 
-# Permite que este trabajo clone el repositorio y cree un despliegue de página
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+env:
+  BUILD_PATH: '.'
+
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v5
-      - name: Install, build, and upload your site
-        uses: withastro/action@v5
-        # with:
-          # path: . # La ubicación raíz de tu proyecto de Astro dentro del repositorio. (opcional)
-          # node-version: 24 # La versión específica de Node que debería usarse para construir tu sitio. Por defecto es 22. (opcional)
-          # package-manager: pnpm@latest # El gestor de paquetes de Node que debería usarse para instalar dependencias y construir tu sitio. Detectado automáticamente basado en tu lockfile. (opcional)
-          # build-cmd: pnpm run build # El comando para compilar tu sitio. Por defecto ejecuta el script/tarea build del paquete. (opcional)
-        # env:
-          # PUBLIC_POKEAPI: 'https://pokeapi.co/api/v2' # Usa comillas simples para el valor de la variable. (opcional)
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Detect package manager
+        id: detect-package-manager
+        run: |
+          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=yarn" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/package-lock.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/pnpm-lock.yaml" ]; then
+            echo "manager=pnpm" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=pnpm" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "Unable to determine package manager"
+            exit 1
+          fi
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.manager == 'yarn' && 'yarn.lock' || steps.detect-package-manager.outputs.manager == 'pnpm' && 'pnpm-lock.yaml' || 'package-lock.json' }}
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Install dependencies
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        working-directory: ${{ env.BUILD_PATH }}
+      - name: Build with Astro
+        run: |
+          ${{ steps.detect-package-manager.outputs.runner }} astro build \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
+        working-directory: ${{ env.BUILD_PATH }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_PATH }}/dist
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
