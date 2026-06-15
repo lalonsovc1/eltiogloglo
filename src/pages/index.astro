@@ -20,7 +20,6 @@ import GlogloSobreMi from "@/assets/gloglo-sobremi.png"
       class="w-full h-screen flex items-center justify-center overflow-hidden fixed bg-[#0D0D11]"
     >
       
-      <!-- IMAGEN DE FONDO (Con tus ajustes de posición y escala) -->
       <div class="absolute inset-y-0 left-0 w-1/2 h-full z-0 overflow-hidden">
         <img
           id="hero-key-background"
@@ -31,7 +30,6 @@ import GlogloSobreMi from "@/assets/gloglo-sobremi.png"
         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0D0D11]/80"></div>
       </div>
 
-      <!-- FONDO: MEDIA LUNA RED-400 -->
       <div class="absolute inset-0 z-0 w-full h-full pointer-events-none">
         <div 
           class="absolute top-0 right-0 w-[70%] sm:w-[65%] h-full bg-gradient-to-b from-red-400/30 via-red-500/10 to-[#0D0D11] opacity-[5]"
@@ -39,62 +37,59 @@ import GlogloSobreMi from "@/assets/gloglo-sobremi.png"
         ></div>
       </div>
 
-      <!-- CONTENEDOR GRID: FIJO EN 2 COLUMNAS -->
       <div class="relative z-10 w-full max-w-[1280px] px-3 sm:px-6 md:px-16 grid grid-cols-2 gap-2 sm:gap-4 items-center h-full">
         
         <div class="pointer-events-none w-full h-full"></div>
 
-        <!-- LADO DERECHO: TODO EL TEXTO AGRANDADO -->
-        <div id="hero-key-logo" class="flex flex-col items-start text-left pointer-events-auto w-full pl-1 sm:pl-6 md:pl-12">
+        <div id="hero-key-logo" class="flex flex-col items-start text-left pointer-events-auto w-full pl-1 sm:pl-6 md:pl-12 pb-36 md:pb-0">
           
-          <!-- Etiqueta de Acceso Gratis (Agrandada en móvil a text-xs) -->
           <div class="flex items-center gap-1.5 mb-2.5 sm:mb-4 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 drop-shadow-sm">
             <span class="text-[#EED36D] font-black text-xs sm:text-xs uppercase tracking-widest animate-pulse">● 100% GRATIS</span>
           </div>
 
-          <!-- Encabezado Principal (Agrandado en móvil a text-3xl / text-4xl) -->
           <h1 class="text-white font-black italic uppercase tracking-tighter text-3xl sm:text-5xl lg:text-7xl leading-[0.90] mb-3 sm:mb-4 flex flex-col drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]">
             <span>ALINEA</span>
             <span>TU JUEGO</span>
             <span>AL DINERO</span>
-            <!-- Bloques inclinados (Agrandados en móvil a text-xl) -->
             <div class="flex flex-col sm:flex-row gap-1.5 mt-2 sm:mt-3">
               <span class="text-[#0D0D11] bg-white px-2.5 py-1 transform -skew-x-12 font-black not-italic tracking-normal text-xl sm:text-2xl md:text-4xl self-start">ES GRATIS</span>
               <span class="text-[#0D0D11] bg-white px-2.5 py-1 transform -skew-x-12 font-black not-italic tracking-normal text-xl sm:text-2xl md:text-4xl self-start">SIN CUOTAS</span>
             </div>
           </h1>
 
-          <!-- Textos Secundarios (Subtítulo principal ahora es text-base en móvil) -->
           <p class="text-white font-bold text-base sm:text-lg md:text-xl mb-1.5 max-w-[95%] leading-tight drop-shadow-sm">
             Sin trucos ni cuotas de entrada. 
           </p>
-          <!-- Párrafo descriptivo ahora es text-sm en móvil -->
           <p class="text-gray-300 font-medium text-sm sm:text-xs md:text-sm max-w-[95%] leading-snug drop-shadow-sm mb-5 sm:mb-6">
             Únete hoy y descubre mi estrategia <span class="text-[#EED36D] font-black">libre de costos.</span>
           </p>
 
-          <!-- ========================================== -->
-          <!-- BOTÓN DE TELEGRAM (Agrandado a text-xs / sm) -->
-          <!-- ========================================== -->
-          <div class="w-full max-w-[420px] flex flex-col gap-2.5 sm:gap-4 items-start">
+          <div class="absolute bottom-36 left-4 right-4 md:relative md:bottom-auto md:left-auto md:right-auto w-auto md:w-full max-w-none md:max-w-[420px] flex flex-col gap-2.5 sm:gap-4 items-center md:items-start z-30">
             
-            <a 
-              href="https://t.me/gloglokingbet" 
-              class="w-full flex items-center justify-between gap-3 bg-gradient-to-r from-[#F2D97B] to-[#D5B03B] text-black font-black p-4 sm:p-5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base uppercase tracking-tight shadow-[0_12px_25px_rgba(213,176,59,0.3)] transform active:scale-[0.98] transition-all duration-300 group"
-            >
-              <div class="flex flex-col text-left leading-[1.1] font-black tracking-tight">
-                <span>ENTRAR AL</span>
-                <span>CANAL GRATIS</span>
-                <span>AHORA MISMO</span>
-              </div>
-              
-              <svg class="w-6 h-6 sm:w-8 sm:h-8 text-black flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.24-5.54 3.65-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.04-.75 4.05-1.76 6.75-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.2-.03.29z"/>
-              </svg>
-            </a>
+<!-- BOTÓN: CRISTAL NEGRO VIP CON DESTELLO DE ORO LÍQUIDO -->
+<a 
+  href="https://t.me/gloglokingbet" 
 
-            <!-- Cupos Disponibles (Agrandado a text-[10px]) -->
-            <div class="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-black tracking-wider text-white uppercase bg-black/50 backdrop-blur-md px-3 py-2 rounded-full border border-white/5">
+  class="w-full flex items-center justify-between gap-3 bg-gradient-to-r from-white via-[#16161A] to-[#0F0F12] text-white font-black py-6 px-5 sm:p-5 rounded-2xl uppercase tracking-tight shadow-[0_15px_35px_rgba(212,175,55,0.15),inset_0_1px_2px_rgba(255,255,255,0.1)] border border-white/5 relative overflow-hidden transform active:scale-[0.98] transition-all duration-300 group"
+>
+  <!-- EL DESTELLO: RAYO DE ORO LÍQUIDO REALISTA -->
+  <!-- Una franja diagonal inclinada con el degradado de oro de 24k -->
+  <div class="absolute inset-0 w-[150%] h-full bg-gradient-to-r from-transparent via-[#D4AF37]/40 via-[#FFD700]/80 via-[#AA7C11]/40 to-transparent -skew-x-12 -translate-x-full pointer-events-none animate-reverse-shimmer"></div>
+
+  <!-- TEXTO GIGANTE EN 3 LÍNEAS (Blanco puro para resaltar sobre el fondo negro) -->
+  <div class="relative z-10 flex flex-col text-left leading-[1.0] font-white tracking-tighter text-2xl sm:text-sm md:text-base text-black drop-shadow-[0_2px_4px_rgba(400,0,0,0.4)]">
+    <span>ENTRAR AL</span>
+    <span>CANAL GRATIS</span>
+    <span>AHORA MISMO</span>
+  </div>
+  
+  <!-- Icono de Telegram en Oro Brillante para contrastar -->
+  <svg class="relative z-10 w-8 h-8 sm:w-8 sm:h-8 text-[#FFD700] flex-shrink-0 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.24-5.54 3.65-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.04-.75 4.05-1.76 6.75-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.2-.03.29z"/>
+  </svg>
+</a>
+
+            <div class="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-black tracking-wider text-white uppercase bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 w-max shadow-lg">
               <span class="relative flex h-2 w-2">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2 w-2 bg-[#10B981]"></span>
@@ -142,7 +137,7 @@ import GlogloSobreMi from "@/assets/gloglo-sobremi.png"
       id="LogoVI"
       src={LogoVI.src} 
       alt="Stake Logo"
-      class="w-38 h-auto drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
+      class="w-35 h-auto drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
     />
   </a>
 
@@ -548,6 +543,24 @@ import GlogloSobreMi from "@/assets/gloglo-sobremi.png"
   </div>
 
 <style is:global>
+@keyframes reverseShimmer {
+    0% {
+      transform: translateX(-120%) skewX(-12deg);
+    }
+    100% {
+      transform: translateX(120%) skewX(-12deg);
+    }
+  }
+
+  .animate-reverse-shimmer {
+    animation: reverseShimmer 3s infinite ease-in-out;
+  }
+  .animate-gold-shimmer {
+    animation: goldShimmer 3s infinite ease-in-out;
+  }
+  .animate-shimmer {
+    animation: shimmer 2.5s infinite linear;
+  }
 
   .animate-parpadeo {
     animation: parpadeoSuave 2s infinite ease-in-out;
