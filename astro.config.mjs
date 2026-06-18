@@ -5,8 +5,12 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://lalonsovc1.github.io',
-  base: 'eltiogloglo',
+  // 1. Cambiamos tu URL vieja por tu dominio personalizado con https
+  site: 'https://eltiogloglo.com',
+  
+  // 2. Cambiamos el subdirectorio por la raíz fija '/'
+  base: '/',
+  
   vite: {
     plugins: [tailwindcss()]
   }
